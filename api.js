@@ -29,7 +29,13 @@
             loa.classList.add("block");
             app.classList.add("hidden");
             fetch(`https://downtiktok-tau.vercel.app/down?link=${urls.value}`)
-                .then(response => response.json())
+                 .then((response) => {
+                      if (!response.ok) {
+                          throw new alert('failed fetch)
+                           
+                      }
+                      return response.json();
+                  })
                 .then(data => {
                     console.log(data);
                     app.classList.remove("hidden")
