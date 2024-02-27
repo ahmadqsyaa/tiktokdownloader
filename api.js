@@ -37,7 +37,7 @@
                       return response.json();
                   })
                 .then(data => {
-                    console.log(data);
+                    console.log(data.status);
                     app.classList.remove("hidden")
                     app.classList.add("block");
                     loading.classList.remove("block")
