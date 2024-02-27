@@ -31,7 +31,7 @@
             fetch(`https://downtiktok-tau.vercel.app/down?link=${urls.value}`)
                  .then((response) => {
                       if (!response.ok) {
-                          throw new alert('failed fetch)
+                          throw new alert('failed fetch')
                            
                       }
                       return response.json();
