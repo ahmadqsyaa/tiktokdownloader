@@ -30,11 +30,8 @@
             app.classList.add("hidden");
             fetch(`https://downtiktok-tau.vercel.app/down?link=${urls.value}`)
                  .then((response) => {
-                      if (!response.ok) {
-                          throw new alert('failed fetch')
-                           
-                      }
-                      return response.json();
+                       response.json();
+                      console.log(response.status)
                   })
                 .then(data => {
                     console.log(data.status);
