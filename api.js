@@ -31,7 +31,7 @@
             fetch(`https://downtiktok-tau.vercel.app/down?link=${urls.value}`)
                  .then((response) => {
                        response.json();
-                      console.log(response.status)
+                      console.log(response)
                   })
                 .then(data => {
                     console.log(data.status);
