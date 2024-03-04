@@ -29,12 +29,8 @@
             loa.classList.add("block");
             app.classList.add("hidden");
             fetch(`https://downtiktok-tau.vercel.app/down?link=${urls.value}`)
-                 .then((response) => {
-                       response.json();
-                      console.log(response)
-                  })
+                 .then((response) => response.json())
                 .then(data => {
-                    console.log(data.status);
                     app.classList.remove("hidden")
                     app.classList.add("block");
                     loading.classList.remove("block")
