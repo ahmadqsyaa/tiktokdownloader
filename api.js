@@ -39,7 +39,7 @@
                     loa.classList.add("hidden");
                     vidio.src = data.result.video; 
                     music.href = data.result.music;
-                    dviv.href = data.result.video; 
+                    dvid.href = data.result.video; 
                     title.innerHTML = data.result.desc
                     like.innerHTML = data.result.statistics.likeCount
                     komen.innerHTML = data.result.statistics.commentCount
