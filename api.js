@@ -7,7 +7,6 @@
      var info = document.getElementById("info");
      var erro = document.getElementById("error");
      var err = document.getElementById("err");
-     var play = document.getElementById("play");
      var like = document.getElementById("like");
      var komen = document.getElementById("komen");
      var share = document.getElementById("share");
@@ -28,7 +27,7 @@
             loa.classList.remove("hidden")
             loa.classList.add("block");
             app.classList.add("hidden");
-            fetch(`https://downtiktok-tau.vercel.app/down?link=${urls.value}`)
+            fetch(`https://tt-api-dl.vercel.app/down?version=v3&link=${urls.value}`)
                  .then((response) => response.json())
                 .then(data => {
                     app.classList.remove("hidden")
@@ -37,13 +36,12 @@
                     loading.classList.add("hidden");
                     loa.classList.remove("block")
                     loa.classList.add("hidden");
-                    vidio.src = data.video; 
-                    music.href = data.music; 
-                    title.innerHTML = data.title
-                    play.innerHTML = data.play
-                    like.innerHTML = data.like
-                    komen.innerHTML = data.comment
-                    share.innerHTML = data.share
+                    vidio.src = data.result.video; 
+                    music.href = data.result.music; 
+                    title.innerHTML = data.result.desc
+                    like.innerHTML = data.result.statistics.likeCount
+                    komen.innerHTML = data.result.statistics.commentCount
+                    share.innerHTML = data.result.statistics.shareCount
                 })
                 .catch(error => {
                     console.error('Terjadi kesalahan:', error);
