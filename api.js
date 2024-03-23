@@ -11,6 +11,7 @@
      var komen = document.getElementById("komen");
      var share = document.getElementById("share");
      var music = document.getElementById("music");
+     var dvid = document.getElementById("dvid");
      
     
         function send(){
@@ -37,7 +38,8 @@
                     loa.classList.remove("block")
                     loa.classList.add("hidden");
                     vidio.src = data.result.video; 
-                    music.href = data.result.music; 
+                    music.href = data.result.music;
+                    dviv.href = data.result.video; 
                     title.innerHTML = data.result.desc
                     like.innerHTML = data.result.statistics.likeCount
                     komen.innerHTML = data.result.statistics.commentCount
