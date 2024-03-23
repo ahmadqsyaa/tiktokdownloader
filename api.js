@@ -37,9 +37,9 @@
                     loading.classList.add("hidden");
                     loa.classList.remove("block")
                     loa.classList.add("hidden");
-                    vidio.src = data.result.video; 
-                    music.href = data.result.music;
-                    dvid.href = data.result.video; 
+                    vidio.src = data.result.video
+                    music.href = data.result.music
+                    dvid.href = data.result.video
                     title.innerHTML = data.result.desc
                     like.innerHTML = data.result.statistics.likeCount
                     komen.innerHTML = data.result.statistics.commentCount
