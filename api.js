@@ -27,7 +27,7 @@
             loa.classList.remove("hidden")
             loa.classList.add("block");
             app.classList.add("hidden");
-            fetch(`https://tt-api-dl.vercel.app/down?version=v3&link=${urls.value}`)
+            fetch(`https://tt-api-dl.vercel.app/down?version=v2&link=${urls.value}`)
                  .then((response) => response.json())
                 .then(data => {
                     app.classList.remove("hidden")
