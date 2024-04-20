@@ -12,8 +12,10 @@
      var share = document.getElementById("share");
      var music = document.getElementById("music");
      var dvid = document.getElementById("dvid");
-     
-    
+     var maintenance = document.getElementById("bo");
+     var bod = document.getElementById("bod");
+     maintenance.classList.add("block");
+     bod.classList.add("hidden");
         function send(){
           if (urls.value == "") {
               info.classList.add("input-error")
