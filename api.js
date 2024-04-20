@@ -14,7 +14,7 @@
      var dvid = document.getElementById("dvid");
      var maintenance = document.getElementById("bo");
      var bod = document.getElementById("bod");
-     maintenance.classList.add("block");
+     maintenance.classList.remove("hidden")
      bod.classList.add("hidden");
         function send(){
           if (urls.value == "") {
